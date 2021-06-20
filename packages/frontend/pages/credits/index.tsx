@@ -1,16 +1,12 @@
-//React imports
 import React from 'react'
+import Navigation, { Page } from '../../components/Navigation/Navigation'
+import Footer from '../../components/Footer/Footer'
 
-//Project imports
-import Navigation from '../../components/Navigation'
-
-function Credits() {
+export default function Credits() {
   return (
     <>
-      <Navigation title="Credits" page="Credits" />
-      <div>Credits</div>
+      <Navigation title="Credits" page={Page.CREDITS} />
+      <Footer />
     </>
   )
 }
-
-export default Credits
