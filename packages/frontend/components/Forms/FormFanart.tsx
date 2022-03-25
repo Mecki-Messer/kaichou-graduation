@@ -58,7 +58,7 @@ export default function FormFanart(props: propsInterface) {
     delete data.confirmation
 
     if (!confirmation) {
-      return setErrors({ confirmation: 'You must confirm this' })
+      return setErrors({ confirmation: 'You must confirm this to submit' })
     }
 
     setErrors({})
@@ -69,7 +69,7 @@ export default function FormFanart(props: propsInterface) {
       await createFanart(data)
       if (onSuccess) onSuccess()
     } catch (err) {
-      const message = err.response.data.message
+      const message = err.message
       setErrors({ submission: message })
       if (onFail) onFail()
     }

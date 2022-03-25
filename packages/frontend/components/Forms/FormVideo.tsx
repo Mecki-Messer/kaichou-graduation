@@ -53,7 +53,7 @@ export default function FormVideo(props: propsInterface) {
       await createVideo(data)
       if (onSuccess) onSuccess()
     } catch (err) {
-      const message = err.response.data.message
+      const message = err.message
       setErrors({ submission: message })
       if (onFail) onFail()
     }
@@ -61,6 +61,8 @@ export default function FormVideo(props: propsInterface) {
 
   function handleChange() {
     const data = getFormData(formEl.current) as VideoInterface
+    data.title = '<Title>'
+    data.creator = '<Creator>'
     if (validate(data, false)) setPreview(data)
     else setPreview(null)
   }

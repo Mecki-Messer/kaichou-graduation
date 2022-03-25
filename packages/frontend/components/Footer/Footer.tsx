@@ -21,6 +21,9 @@ export default function Footer() {
               <Link href="/">
                 <a>Home</a>
               </Link>
+              <Link href="/fanart">
+                <a>Fanart</a>
+              </Link>
               <Link href="/videos">
                 <a>Videos</a>
               </Link>
@@ -50,18 +53,6 @@ export default function Footer() {
               </Link>
               <Link href="https://discord.gg/QWRuvqjRXM">
                 <a>Kiryukai Project</a>
-              </Link>
-            </div>
-            <div className={styles.column}>
-              <p>Legal</p>
-              <Link href="/terms">
-                <a>Terms</a>
-              </Link>
-              <Link href="/privacy">
-                <a>Privacy</a>
-              </Link>
-              <Link href="/accessibility">
-                <a>Accessibility</a>
               </Link>
             </div>
           </div>
